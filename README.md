@@ -24,9 +24,9 @@ Insufficient disk space prevents PostgreSQL from writing new data or creating te
 Service will move to read-only at the high-watermark.
 
 ```
-[pg-failure-1]2025-01-09T19:29:09.349729[postgresql-16][29-1] pid=82,user=,db=,app=,client= LOG: parameter "default_transaction_read_only" changed to "on"
+[postgresql-16][29-1] pid=82,user=,db=,app=,client= LOG: parameter "default_transaction_read_only" changed to "on"
 ...
-[pg-failure-1]2025-01-09T19:29:15.066481[postgresql-16][31-1] pid=82,user=,db=,app=,client= LOG: parameter "default_transaction_read_only" changed to "off"
+[postgresql-16][31-1] pid=82,user=,db=,app=,client= LOG: parameter "default_transaction_read_only" changed to "off"
 ```
 
 
@@ -54,7 +54,7 @@ earlyoom: low memory! at or below SIGTERM limits: mem 10.00%, swap  4.00%
 earlyoom: mem avail:    31 of  1960 MiB ( 1.63%), swap free:   94 of 2455 MiB ( 3.84%)
 earlyoom: escalating to SIGKILL after 0.5 seconds
 
-pg-failure-1 postgresql-16: [32-1] pid=82,user=,db=,app=,client= LOG:  server process (PID 64684) was terminated by signal 9: Killed
+postgresql-16: [32-1] pid=82,user=,db=,app=,client= LOG:  server process (PID 64684) was terminated by signal 9: Killed
 ```
 
 ## High CPU Usage
