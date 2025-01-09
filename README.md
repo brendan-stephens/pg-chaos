@@ -21,7 +21,8 @@ Insufficient disk space prevents PostgreSQL from writing new data or creating te
   * Explicitly set the data generation [steps](https://www.postgresql.org/docs/current/pgbench.html#PGBENCH-INIT-OPTIONS)
 
 **Aiven Handling**:<br>
-Service will move to read-only at the high-watermark.
+Service will move to read-only at the high-watermark.<br>
+The serivice can be returned to read-write for maintenance. 
 
 ```
 [postgresql-16][29-1] pid=82,user=,db=,app=,client= LOG: parameter "default_transaction_read_only" changed to "on"
@@ -104,7 +105,8 @@ Kill the Postgres service: `kill -9 $(pgrep postgres)`.<br>
 
 **Aiven Handling**:<br>
 We will restart the container process.<br>
-Note that node monitor for `RUNNING` state and `pglookout` still apply. 
+Note that node monitor for `RUNNING` state and `pglookout` still apply.<br>
+A node with service that does not return to expected state within thresholds will be replaced. 
 
 ```
 postgresql-16: [36-1] pid=64817,user=postgres,db=_aiven,app=[unknown],client=[local] FATAL:  the database system is in recovery mode
