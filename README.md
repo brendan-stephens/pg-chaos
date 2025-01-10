@@ -48,7 +48,7 @@ Queries or background processes consume excessive memory, causing the OS to term
   Ensures the recursive CTE is fully evaluated.
 
 **Aiven Handling**:<br>
-Early OOM Detection will kill the process in the container before the OS hits OOM Killer. See: [Out of Meory Conditions](https://github.com/aiven/aiven-docs/blob/main/docs/platform/concepts/out-of-memory-conditions.md)
+Early OOM Detection will kill the process in the container before the OS hits OOM Killer. See: [Out of Memory Conditions](https://github.com/aiven/aiven-docs/blob/main/docs/platform/concepts/out-of-memory-conditions.md)
 
 ```
 earlyoom: low memory! at or below SIGTERM limits: mem 10.00%, swap  4.00%                                  
